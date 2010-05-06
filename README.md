@@ -18,19 +18,19 @@ We are in need of support, this project has many benefits like the sandbox, and 
 
 There is a somewhat complete list of missing features and needed things in this [Trello board](https://trello.com/b/LB5l35bS/cube)
 
-If you find an issue or bug dont doubt on reporting it, also if you want to give support in any other way send me a message
+If you find an issue or bug dont doubt on reporting it. If you want to give support in any other way send me a message
 
 ###Structure
 
-This is code is made so that it can be useful for other projects, this means that it doesnt use a monolithic structure, it has a structure so that anyone can come and add things or take things.
+This code is made so that it can be useful for other projects, this means that it doesnt use a monolithic structure, it is distributed in many files so that anyone can come and add (or take) things.
 
 The structure is the following:
 
  * `assets`: This folders contains the assets of Cube, we try to use a minimal set of assets
  * `interface`: This is a folder containing the interface, like the drawing operations, the listing of files and folders, etc.
- * `run`: This folders contains fun things, this is what reads .love files and interprets .lua files, handles the environment recognices the version and modifies the files
+ * `run`: This folder contains fun things, this is what reads `.love` files and interprets `.lua` files, handles the environment, recognices the version and modifies the files.
  * `versions`: This folder contains the different LÖVE versions in separate folders, each folder contains a .lua file per LOVE module (`audio.lua`, `graphics.lua`, etc), and a `init.lua` file that groups them together
- * `utilities`: This are additional functions that lets Cube do neat things like copying files to the save directory and such
+ * `utilities`: This are additional functions that lets Cube do neat things (like copying files to the save directory)
 
 We will try to make the API simple so that other projects can use the `run` and the `versions` folders without the others.
 
