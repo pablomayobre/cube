@@ -28,4 +28,4 @@ logo:draw = function (w,h)
 	end
 end
 
-return self
+return logo

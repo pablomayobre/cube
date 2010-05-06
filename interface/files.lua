@@ -3,7 +3,7 @@ local button = require "interface.button"
 
 local files = {}
 
-local checkdir = function (fold)
+files.checkdir = function (fold)
 	if not (love.filesystem.exists(fold) and love.filesystem.isDirectory(fold)) then
 		love.filesystem.createDirectory(fold)
 	end
@@ -21,7 +21,7 @@ files:load = function (w,h)
 	--Create an scrollbar
 	self.scrollbar = scroll:new()
 	--Check if the "games" folder exists and if it doesnt create it
-	checkdir("games")
+	self.checkdir("games")
 	--Start at the games folder
 	self.folder = {"games"}
 	--Load the files and folders in the "games" folder
@@ -99,7 +99,7 @@ files:reload = function ()
 	self:resize()
 end
 
-file:resize = function (w,h)
+files:resize = function (w,h)
 	local w = w or love.graphics.getWidth()
 	local h = h or love.graphics.getHeight()
 
@@ -115,3 +115,5 @@ file:resize = function (w,h)
 	self.scrollbar:setContent(self.height)
 	self.scrollbar:setArea()
 end
+
+return files
