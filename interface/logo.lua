@@ -13,7 +13,7 @@ end
 logo:draw = function (w,h)
 	local self.h = h/5
 	local self.w = w - (w/20)
-	--Weid way to determine which image shall be used and where should it be positioned
+	--Weird way to determine which image shall be used and where should it be positioned
 	if self.w1 * self.h/self.h1 > self.w then
 		if self.h2 * self.w/self.h2 > self.h then
 			love.graphics.draw(self.icon,w/2,h/10,0,self.h/self.h2,nil,self.w2/2,self.h2/2)
