@@ -24,7 +24,7 @@ The main problems are:
  * Errors, I dont usually `assert`, `pcall` or `error` things so errors are not reported correctly, if someone can help me with this I would love it
  * Comment and document, I like documenting but I dont comment my code too much.
 
-If you find an issue or bug dont doubt on reporting it also if you want to give support in any other way send me a message
+If you find an issue or bug dont doubt on reporting it, also if you want to give support in any other way send me a message
 
 ###Structure
 
@@ -35,10 +35,10 @@ The structure is the following:
  * `assets`: This folders contains the assets of Cube, we try to use a minimal set of assets
  * `interface`: This is a folder containing the interface, like the drawing operations, the listing of files and folders, etc.
  * `run`: This folders contains fun things, this is what reads .love files and interprets .lua files, handles the environment recognices the version and modifies the files
- * `versions`: This folder contains the different LÖVE versions in separate folders, each folder contains a .lua file per LOVE module (`audio.lua`, `graphics.lua`, etc), and a `main.lua` file that groups them together
+ * `versions`: This folder contains the different LÖVE versions in separate folders, each folder contains a .lua file per LOVE module (`audio.lua`, `graphics.lua`, etc), and a `init.lua` file that groups them together
  * `utilities`: This are additional functions that lets Cube do neat things like copying files to the save directory and such
 
-We will try to make the API simple so that other projects can use the `run` and the `versions` folders without the other two.
+We will try to make the API simple so that other projects can use the `run` and the `versions` folders without the others.
 
 ###License
 

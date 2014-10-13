@@ -7,7 +7,7 @@ love.conf = function (t)
     t.version = "0.9.1"
 	
 	t.console = true
-    t.window.icon = "icon.png"
+    t.window.icon = "assets/icon.png"
     t.window.width = 600
     t.window.height = 500
 	t.window.minwidth = 600
