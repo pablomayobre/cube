@@ -1,6 +1,8 @@
 Cube
 ====
 
+![Cube](https://github.com/Positive07/cube/blob/master/assets/cube.png)
+
 Cube is an application made for [LÖVE](http://www.love2d.org), that is capable of running .love files
 
 This allows you to modify the .love file behavior anyway you want without modifying the file itself.
@@ -11,9 +13,12 @@ This also means that game authors (Lovers) wont need to reimplement the game for
 
 Other projects like [Vapor](https://www.github.com/josefnpat/Vapor) will benefit from it since they will able to support more Games
 
+![Cube interface](https://github.com/Positive07/cube/blob/master/assets/screenshot.png)
+
 ###Support
 
-We are in need of support, this project has many benefits like the sandbox, and the compatibility but it also bring troubles, so if you can help with any of this things please dont doubt to make a pull request or send me a PM
+We are in need of support, this project has many benefits like the sandbox, and the compatibility but it also brings troubles, so if you can help with any of this things please dont doubt to make a pull request or send me a PM
+There is a somewhat complete list of missing features and needed things in this [Trello board](https://trello.com/b/LB5l35bS/cube)
 
 The main problems are:
 
