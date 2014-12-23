@@ -1,6 +1,4 @@
-local self = {}
-local selfimage,selftext
-local w1,h1,w2,h2
+local logo = {}
 
 logo:load = function ()
 	self.icon	= love.graphics.newImage("icon.png")
