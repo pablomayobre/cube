@@ -1,12 +1,12 @@
 Cube
 ====
-![Cube Logo](https://github.com/Positive07/cube/blob/master/assets/logo.png)
+![Cube Logo](https://github.com/Positive07/cube/blob/wip/assets/logo.png)
 
-Cube is an application (and library) made for LÖVE, that is capable of running .love files **(SO META!)**
+Cube is an application (and library) made for [LÖVE](https://www.love2d.org), that is capable of running .love files **(SO META!)**
 
 The primary objetive of this project is to support a wide variety of LÖVE versions so that anyone can run any .love file in the latest version of LÖVE even if the file was designed for an older version itself.
 
-Other projects like Vapor will benefit from it since they will able to support outdated games.
+Other projects like [Vapor](https://github.com/josefnpat/vapor) will benefit from it since they will able to support outdated games.
 
 **_NOTE:_ This is yet a Work In Progress (WIP) there are lot of uncommitted files and missing things, no test have been performed yet so this is not ready for distribution in any sense!**
 
@@ -28,7 +28,7 @@ Another alternative is changing the save directory identity of Cube:
 cube yourgame.love --appdata="NewIdentity"
 ```
 
-### Download
+#### Download
 
 Download this application from the releases [here](https://github.com/Positive07/cube/releases/tag/0.4.0-executable)
 
@@ -45,7 +45,7 @@ git checkout library
 
 Alternatively you can download a `.zip` or `.tar.gz` from the [Releases](https://github.com/Positive07/cube/releases/tag/0.4.0-library).
 
-### Usage
+#### Usage
 
 Usage is very simple, just drop the cube folder in your project, then `require "cube"` and start using it!
 
@@ -65,6 +65,6 @@ To have more info on all the available functions check the [wiki](https://github
 
 ## License
 
-Cube is Licensed under **[MIT License][9]**
+Cube is Licensed under **[MIT License](https://github.com/Positive07/cube/blob/master/LICENSE)**
 
 Copyright(c) 2015 Pablo Ariel Mayobre (Positive07).
