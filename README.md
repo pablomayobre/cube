@@ -1,39 +1,70 @@
 Cube
 ====
-![Cube](https://github.com/Positive07/cube/blob/master/assets/cube.png)
+![Cube Logo](https://github.com/Positive07/cube/blob/master/assets/logo.png)
 
-Cube is an application made for [LÖVE](http://www.love2d.org), that is capable of running .love files
-
-This allows you to modify the .love file behavior anyway you want without modifying the file itself.
+Cube is an application (and library) made for LÖVE, that is capable of running .love files **(SO META!)**
 
 The primary objetive of this project is to support a wide variety of LÖVE versions so that anyone can run any .love file in the latest version of LÖVE even if the file was designed for an older version itself.
 
-This also means that game authors (Lovers) wont need to reimplement the game for the lastest LÖVE version. 
+Other projects like Vapor will benefit from it since they will able to support outdated games.
 
-Other projects like [Vapor](https://www.github.com/josefnpat/Vapor) will benefit from it since they will able to support more Games
-![Cube interface](https://github.com/Positive07/cube/blob/master/assets/screenshot.png)
-###Support
+**_NOTE:_ This is yet a Work In Progress (WIP) there are lot of uncommitted files and missing things, no test have been performed yet so this is not ready for distribution in any sense!**
 
-We are in need of support, this project has many benefits like the sandbox, and the compatibility but it also brings troubles, so if you can help with any of this things please dont doubt to make a pull request or send me a PM
+## Application
 
-There is a somewhat complete list of missing features and needed things in this [Trello board](https://trello.com/b/LB5l35bS/cube)
+The application part is the same as LÖVE, basically an executable to which you can drop your file on and just run it.
 
-If you find an issue or bug dont doubt on reporting it, also if you want to give support in any other way send me a message
+This is useful for running outdated projects, the only problem being that it needs to copy the file to the save directory (so it is slow)
 
-###Structure
+You can fix this by dropping the file in the save directory, then you can call Cube as follows:
 
-This is code is made so that it can be useful for other projects, this means that it doesnt use a monolithic structure, it has a structure so that anyone can come and add things or take things.
+```shell
+cube yourgame.love --appdata
+```
 
-The structure is the following:
+Another alternative is changing the save directory identity of Cube:
 
- * `assets`: This folders contains the assets of Cube, we try to use a minimal set of assets
- * `interface`: This is a folder containing the interface, like the drawing operations, the listing of files and folders, etc.
- * `run`: This folders contains fun things, this is what reads .love files and interprets .lua files, handles the environment recognices the version and modifies the files
- * `versions`: This folder contains the different LÖVE versions in separate folders, each folder contains a .lua file per LOVE module (`audio.lua`, `graphics.lua`, etc), and a `init.lua` file that groups them together
- * `utilities`: This are additional functions that lets Cube do neat things like copying files to the save directory and such
+```shell
+cube yourgame.love --appdata="NewIdentity"
+```
 
-We will try to make the API simple so that other projects can use the `run` and the `versions` folders without the others.
+### Download
 
-###License
+Download this application from the releases [here](https://github.com/Positive07/cube/releases/tag/0.4.0-executable)
 
-This project is Licensed under the MIT License, this means it is Open Source, you can do whatever you want with it (even sell it as part of your project), giving appropiate credits, and knowing that this is given without any warranty, this may be buggy and may blow your computer up so use it under your own risk, dont blame me
+If you are interested in the source code just check the [`main.lua` file](https://github.com/Positive07/cube/blob/master/main.lua)
+
+## Library
+
+To grab this library you can `git clone` this repo (I recommend you go to the [`library` branch](https://github.com/Positive07/cube/tree/library), which contains just the library related files)
+
+```shell
+git clone https://github.com/Positive07/cube.git
+git checkout library
+```
+
+Alternatively you can download a `.zip` or `.tar.gz` from the [Releases](https://github.com/Positive07/cube/releases/tag/0.4.0-library).
+
+### Usage
+
+Usage is very simple, just drop the cube folder in your project, then `require "cube"` and start using it!
+
+Here is a basic sample script:
+
+```lua
+local cube = require "cube"
+
+myapp = cube.new("myapp.love")
+
+myapp:onPump(function () print("love.event.pump was called by myapp.love") end
+
+myapp:run()
+```
+
+To have more info on all the available functions check the [wiki](https://github.com/Positive07/cube/wiki).
+
+## License
+
+Cube is Licensed under **[MIT License][9]**
+
+Copyright(c) 2015 Pablo Ariel Mayobre (Positive07).
